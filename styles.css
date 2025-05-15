@@ -1,7 +1,16 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('Fonts/roboto-variablefont_wdthwght-webfont.woff2') format('woff2'),
+         url('Fonts/roboto-variablefont_wdthwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'robotoregular', 'Helvetica Neue', Helvetica, Arial, sans-serif;;
 }
 
 body {
