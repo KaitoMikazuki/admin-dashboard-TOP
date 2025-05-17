@@ -1,16 +1,21 @@
-@font-face {
-    font-family: 'robotoregular';
-    src: url('Fonts/roboto-variablefont_wdthwght-webfont.woff2') format('woff2'),
-         url('Fonts/roboto-variablefont_wdthwght-webfont.woff') format('woff');
+html{
+    --card-curvature: 8px;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'robotoregular', 'Helvetica Neue', Helvetica, Arial, sans-serif;;
+    font-family: 'roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;;
 }
 
 body {
@@ -29,7 +34,6 @@ body {
     background-color: #4590CE;
 }
 
-
 .option,
 .logo {
     color:white;
@@ -42,9 +46,6 @@ body {
 .option{
     font-size: 0.75rem;
 }
-.logo{
-}
-
 
 .option > img,
 .logo > img{
@@ -67,6 +68,18 @@ main{
     grid-template-rows: 5fr 6fr;
 }
 
+.headings {
+    color: #2f2f2f;
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+
+.window{
+    background-color: white;
+    border-radius: var(--card-curvature);
+}
+
+/* Projects section */
 .projects-section{
     background-color: #e3e8ef;
     grid-row: 1 / -1;
@@ -78,15 +91,18 @@ main{
 
 .projects-section > .headings{
     grid-column: 1 / -1;
-    margin: 1rem;
+    margin-left: 1rem;
+    align-self: center;
+    position: relative;
+    bottom: -0.5rem;
 }
 
 .projects-card{
     background: white;
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem;;
     border-left: 10px #e7b74a solid;
-    border-radius: 8px;
+    border-radius: var(--card-curvature);
     display: grid;
     grid-template-rows: 1fr 2.5rem;
 }
@@ -114,4 +130,25 @@ main{
     justify-self: end;
 }
 
+
+/* Announcements section */
+.announcements-section{
+    display: grid;
+    grid-template-rows: 2rem 1fr;
+}
+
+.announcements.window {
+    display: grid;
+    grid-template-rows: 1fr 1px 1fr 1px 1fr;
+    align-items: center;
+}
+
+.announcements.window h6 {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.announcements.window p{
+    color: gray;
+}
 
