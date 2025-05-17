@@ -67,6 +67,15 @@ p {
     width: 70px;
 }
 
+.dashboard .logo:hover{
+    cursor: pointer;
+}
+
+.dashboard .option:hover{
+    cursor: pointer;
+    color: lightgray
+}
+
 /* main section */
 main{
     background-color: #e3e8ef;
@@ -137,6 +146,10 @@ main{
     width: 1.25rem;
     height: auto;
     justify-self: end;
+}
+
+.projects-actions > img:hover{
+    cursor: pointer;
 }
 
 
