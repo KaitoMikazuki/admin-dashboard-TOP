@@ -1,6 +1,7 @@
 html{
-    --card-curvature: 8px;
-    --spacing:1rem;
+    --card-curvature: 10px;
+    --spacing:2rem;
+    --shadow: 2px 2px 4px lightgray;
 }
 
 .roboto-regular {
@@ -78,7 +79,9 @@ main{
     color: #2f2f2f;
     font-weight: 500;
     font-size: 1.25rem;
-    margin: 1rem;
+    padding: 1rem 0;
+    position: relative;
+    bottom: -5px;
 }
 
 .window{
@@ -89,28 +92,27 @@ main{
 /* Projects section */
 .projects-section{
     grid-row: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 2rem repeat(3, 1fr);
-    padding: 1rem;
+    margin: 0 var(--spacing) var(--spacing);
+    display: flex;
+    flex-direction: column
 }
 
-.projects-section > .headings{
-    grid-column: 1 / -1;
-    margin-left: var(--spacing);
-    align-self: center;
-    position: relative;
-    bottom: -0.5rem;
+.projects-window{
+    flex: 1 1 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--spacing);
 }
 
 .projects-card{
     background: white;
     padding: 1rem;
-    margin: var(--spacing);
-    border-left: 10px #e7b74a solid;
+    border-left: 8px #e7b74a solid;
     border-radius: var(--card-curvature);
     display: grid;
     grid-template-rows: 1fr 2.5rem;
+    box-shadow: var(--shadow);
 }
 
 .projects-card h4{
@@ -140,14 +142,13 @@ main{
 
 /* Announcements section */
 .announcements-section{
-    display: grid;
-    grid-template-rows: 2rem 1fr;
+    display: flex;
+    flex-direction: column;
 }
 
 .announcements.window {
-    margin-top: 1rem;
-    margin-right: calc(var(--spacing)*2);
-    justify-self: center;
+    flex: 1 1 0;
+    margin-right: var(--spacing);
     display: grid;
     grid-template-rows: 1fr 1px 1fr 1px 1fr;
     align-items: center;
@@ -164,4 +165,5 @@ main{
     font-size: 0.75rem;
     color: gray;
 }
+
 
