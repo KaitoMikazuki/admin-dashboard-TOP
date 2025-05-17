@@ -1,5 +1,6 @@
 html{
     --card-curvature: 8px;
+    --spacing:1rem;
 }
 
 .roboto-regular {
@@ -16,6 +17,7 @@ html{
     padding: 0;
     margin: 0;
     font-family: 'roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;;
+
 }
 
 body {
@@ -25,6 +27,9 @@ body {
     height: 100vh;
 }
 
+p {
+    font-weight: 400;
+}
 /* dashboard section */
 .dashboard{
     grid-row: 1 / -1;
@@ -37,7 +42,7 @@ body {
 .option,
 .logo {
     color:white;
-    font-weight: 900;
+    font-weight: 700;
     display: grid;
     align-items: center;
     grid-template-columns: 70px 1fr;
@@ -63,15 +68,17 @@ body {
 
 /* main section */
 main{
+    background-color: #e3e8ef;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 5fr 6fr;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .headings {
     color: #2f2f2f;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 1.25rem;
+    margin: 1rem;
 }
 
 .window{
@@ -81,7 +88,6 @@ main{
 
 /* Projects section */
 .projects-section{
-    background-color: #e3e8ef;
     grid-row: 1 / -1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -91,7 +97,7 @@ main{
 
 .projects-section > .headings{
     grid-column: 1 / -1;
-    margin-left: 1rem;
+    margin-left: var(--spacing);
     align-self: center;
     position: relative;
     bottom: -0.5rem;
@@ -100,7 +106,7 @@ main{
 .projects-card{
     background: white;
     padding: 1rem;
-    margin: 1rem;;
+    margin: var(--spacing);
     border-left: 10px #e7b74a solid;
     border-radius: var(--card-curvature);
     display: grid;
@@ -108,8 +114,9 @@ main{
 }
 
 .projects-card h4{
-    font-size: 1.25rem;
-    font-weight: 900;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 0.1rem;
 }
 
 .projects-card p {
@@ -138,17 +145,23 @@ main{
 }
 
 .announcements.window {
+    margin-top: 1rem;
+    margin-right: calc(var(--spacing)*2);
+    justify-self: center;
     display: grid;
     grid-template-rows: 1fr 1px 1fr 1px 1fr;
     align-items: center;
+    padding: 0.5rem 1.5rem;
 }
 
 .announcements.window h6 {
-    font-size: 1rem;
-    font-weight: 900;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: black;
 }
 
 .announcements.window p{
+    font-size: 0.75rem;
     color: gray;
 }
 
