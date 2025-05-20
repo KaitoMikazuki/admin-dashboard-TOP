@@ -220,3 +220,96 @@ main{
 }
 
 
+
+/* header section*/
+.header{
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: 2fr 3fr;
+    margin-left: 5%;
+    padding: 16px 0 ;
+    gap: 16px;
+}
+
+
+/* search section */
+.search{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search > input[type="image"]{
+    height: 1.5rem;
+}
+
+.search > input[type="text"]{
+    appearance: none;
+    flex: 1 1 0;
+    height: 1.5rem;
+
+    background: #e3e8ef;
+    outline: none;
+    border: #e3e8ef 1px solid;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.search > input[type="text"]:focus{
+    border: blue 2px solid;
+}
+
+/* settings section */
+.settings-section{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap:22px;
+    margin-right: 20%;
+
+}
+
+.settings-section img {
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+
+
+/* greetings section */
+.greetings-section{
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.greetings-section > img{
+    width: 100%;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+}
+
+.greetings-section > div > p{
+    font-weight: 500;
+}
+
+/* actions section */
+.actions{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 24px;
+    margin-right: 10%;
+}
+
+.actions > button{
+    flex:1 1 0;
+    max-width: 200px;
+    border: 0;
+    border-radius: 24px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    background: #4590CE;
+
+}
