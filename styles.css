@@ -157,6 +157,7 @@ main{
 .announcements-section{
     display: flex;
     flex-direction: column;
+    margin-bottom: 1rem;
 }
 
 .announcements.window {
@@ -180,6 +181,8 @@ main{
     color: gray;
 }
 
+
+
 /* trending section */
 .trending{
     display: flex;
@@ -192,13 +195,28 @@ main{
     grid-template-rows: repeat(4, 1fr);
     margin-bottom: var(--spacing);
     margin-right: var(--spacing);
+    padding: 1rem 1rem;    
 }
 
 .trending-app{
     display: grid;
-    grid-template-columns:70px 1fr;
+    grid-template-columns:60px 1fr;
     grid-template-rows: 1fr;
     align-items: center;
+    gap: 0 0.5rem;
+    font-size: 0.85rem;
+}
+
+.trending-app > img{
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    width: 100%;
+    border-radius: 100%;
+    padding: 0.5rem;
+}
+
+.trending-app > div > :last-child{
+    color: gray;
 }
 
 
